@@ -1,28 +1,27 @@
-def maximumSum(arr):
-    result = 0
-    for i in arr:
-        result += i
-
-    return result
-
 def maxValue(n, index, maxSum):
-    arr = [1] * n
+    hill_height = 0
+    total_sum = n
+    left_bound = index + 1
+    right_bound = index - 1
+    hill_width = 1
 
-    arr[index] = maxSum + 1 - n
+    while total_sum <= maxSum:
+        print("left:", left_bound, "right:", right_bound)
+        left_bound -= 1
+        right_bound += 1
+        if left_bound == index and right_bound == index:
+            total_sum += hill_width
+        else:
+            l_, r_ = max(left_bound, 0), min(right_bound, n - 1)
+            if left_bound < l_ and right_bound > r_:
+                rm = maxSum - total_sum
+                hill_height += int(rm / hill_width) + 1
+                break
+            else:
+                hill_width = r_ - l_ + 1
+                total_sum += hill_width
+        hill_height += 1
+    return hill_height
 
-    print(arr)
 
-    isLoop = True
-
-    while isLoop:
-        if abs(arr[index] - arr[index + 1]) <= 1 or abs(arr[index - 1] - arr[index]) <= 1:
-            isLoop = False
-            break
-
-        # arr[]
-
-
-
-
-
-print(maxValue(7, 3, 10))
+print(maxValue(4, 2, 6))
