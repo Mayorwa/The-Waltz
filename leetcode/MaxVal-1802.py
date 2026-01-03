@@ -25,3 +25,4 @@ def maxValue(n, index, maxSum):
 
 
 print(maxValue(4, 2, 6))
+print(maxValue(7, 3, 10))
