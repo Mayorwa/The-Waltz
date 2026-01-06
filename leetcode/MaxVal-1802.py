@@ -6,7 +6,6 @@ def maxValue(n, index, maxSum):
     hill_width = 1
 
     while total_sum <= maxSum:
-        print("left:", left_bound, "right:", right_bound)
         left_bound -= 1
         right_bound += 1
         if left_bound == index and right_bound == index:
