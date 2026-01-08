@@ -4,7 +4,6 @@ def removeElement( nums, val):
         if idx != val:
             nums[i] = idx
             i += 1
-    print(nums)
     return i
 
 print(removeElement([3,2,2,3], 3)) # [2,2]
