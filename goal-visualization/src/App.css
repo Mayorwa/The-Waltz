@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', -apple-system, sans-serif;
+  background: #5AADE0;
+  min-height: 100vh;
+}
+
+.app {
+  min-height: 100vh;
+  padding: 20px 30px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+
+.title-section h1 {
+  color: #fff;
+  font-size: 2.8rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.match-subtitle {
+  color: #fff;
+  font-size: 1rem;
+  opacity: 0.9;
+  margin-top: 2px;
+}
+
+.goal-info {
+  color: #fff;
+  font-size: 0.85rem;
+  opacity: 0.75;
+  margin-bottom: 10px;
+}
+
+/* Legend */
+.legend {
+  display: flex;
+  gap: 25px;
+  color: #fff;
+  font-size: 10px;
+}
+
+.legend-column {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.legend-label {
+  font-weight: 500;
+  opacity: 0.7;
+  margin-bottom: 2px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.legend-item span {
+  opacity: 0.85;
+  text-align: right;
+  min-width: 55px;
+}
+
+.line-sample {
+  width: 30px;
+  height: 5px;
+  border-radius: 3px;
+}
+
+.line-sample.with-ball {
+  background: #2563EB;
+}
+
+.line-sample.without-ball {
+  background: #2563EB;
+  opacity: 0.4;
+}
+
+.line-sample.ball-movement {
+  background: rgba(100, 180, 220, 0.8);
+  width: 35px;
+}
+
+.dot-sample {
+  width: 10px;
+  height: 10px;
+  background: #2563EB;
+  border-radius: 50%;
+}
+
+.marker {
+  font-size: 8px;
+}
+
+.marker.pass {
+  color: #D4A843;
+}
+
+.marker.touch {
+  color: #E57373;
+}
+
+/* Main content */
+.main {
+  display: flex;
+  justify-content: center;
+}
+
+.goal-visualization {
+  width: 100%;
+  max-width: 450px;
+}
+
+.visualization-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Footer */
+.footer {
+  color: #fff;
+  opacity: 0.5;
+  font-size: 11px;
+  margin-top: 15px;
+}
