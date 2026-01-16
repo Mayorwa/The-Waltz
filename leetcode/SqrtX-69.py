@@ -15,3 +15,4 @@ def mySqrt(x):
     return result
 
 print(mySqrt(1000))
+print(mySqrt(81))
