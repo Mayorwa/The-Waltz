@@ -4,17 +4,11 @@ def merge(nums1, m, nums2, n):
     j = n - 1
 
 
-    while idx >= 0:
-        if i < 0:
-            nums1[idx] = nums2[j]
-            j -= 1
-        elif j < 0:
+    while j >= 0:
+        if i >= 0 and nums1[i] > nums2[j]:
             nums1[idx] = nums1[i]
             i -= 1
-        elif nums1[i] > nums2[j]:
-            nums1[idx] = nums1[i]
-            i -= 1
-        elif nums1[i] <= nums2[j]:
+        else:
             nums1[idx] = nums2[j]
             j -= 1
         idx -= 1
