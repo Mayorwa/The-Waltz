@@ -13,4 +13,4 @@ def sumOfNumberAndReverse(num) -> bool:
 print(sumOfNumberAndReverse(443))
 print(sumOfNumberAndReverse(63))
 print(sumOfNumberAndReverse(181))
-print(sumOfNumberAndReverse(0))
+# print(sumOfNumberAndReverse(0))
