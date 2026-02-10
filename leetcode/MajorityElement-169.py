@@ -1,7 +1,7 @@
 def majorityElement(nums) -> int:
     # TODO: Brute Force, loop through store in dictionary if a value exceeds n/2 then return the key
     dit = {}
-    half = nums // 2
+    half = len(nums) // 2
     for i in nums:
         if i not in dit:
             dit[i] = 1
