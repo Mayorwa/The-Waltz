@@ -1,5 +1,5 @@
 def convertToTitle(columnNumber):
+    # approach 1
+    return "AA"
 
-    print(columnNumber)
-
-convertToTitle(27)
+print("Testcase 1", convertToTitle(28))
