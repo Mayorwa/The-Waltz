@@ -9,6 +9,8 @@ def convertToTitle(columnNumber):
     result = ""
     while (columnNumber > 26):
         r = columnNumber % 26
+        if r == 0:
+            r += 1
         result += dit[r]
         columnNumber = columnNumber // 26
     result += dit[columnNumber]
@@ -19,3 +21,4 @@ print("Testcase 1", convertToTitle(1)) #A
 print("Testcase 2", convertToTitle(28)) #AB
 print("Testcase 3", convertToTitle(701)) # ZY
 print("Testcase 3", convertToTitle(809)) # AEC
+print("Testcase 3", convertToTitle(52)) # AEC
