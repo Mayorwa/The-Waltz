@@ -5,15 +5,13 @@ def convertToTitle(columnNumber):
 
     # testcase 1, 28: 28%26 -> 2:B -> 1
 
-    dit = {i: chr(i + 64) for i in range(1, 27)}
     result = ""
-    while (columnNumber > 26):
+
+    while columnNumber > 0:
+        columnNumber -= 1  #     shift to 0-based
         r = columnNumber % 26
-        if r == 0:
-            r += 1
-        result += dit[r]
-        columnNumber = columnNumber // 26
-    result += dit[columnNumber]
+        result += chr(r + 65)
+        columnNumber //= 26
 
     return result[::-1]
 
